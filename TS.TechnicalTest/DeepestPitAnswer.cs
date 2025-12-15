@@ -4,6 +4,12 @@ public class DeepestPitAnswer
 {
     public static int Solution(int[] points)
     {
-        throw new NotImplementedException("Not completed yet"); 
-    }
+            int n = points.Length;
+            int maxDepth = -1;
+
+            int i = 1;
+            
+            return maxDepth;
+        }
+    
 }
