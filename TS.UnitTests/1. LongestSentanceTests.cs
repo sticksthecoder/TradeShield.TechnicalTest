@@ -15,7 +15,7 @@ public class LongestSentanceTests
     }
     
     [TestMethod]
-    public void Q2_BasicNominalTest()
+    public void Q1_BasicNominalTest2()
     {
         var input = $"Forget CVs..Save time . x x";
         var outcome = LongestSentanceAnswer.Solution(input);
