@@ -8,7 +8,17 @@ public class DeepestPitAnswer
             int maxDepth = -1;
 
             int i = 1;
-            
+
+            while (i < n)
+            {
+                // Find start of a decent
+                if (points[i] < points[i - 1] && points[i - 1] > 0)
+                {
+                   
+                }
+
+            }
+
             return maxDepth;
         }
     
