@@ -6,22 +6,20 @@ public class LongestSentanceAnswer
     public static int Solution(string s)
     {
         //separate string into sentences
-        var sentences = s.Split('.');
+        var sentences = s.Split(['.', '?', '!'], StringSplitOptions.None);
         int highestNumber = 0;
         
         foreach (var sentence in sentences)
         {
             //separate sentence into words
-            var words = sentence.Trim().Split(' ');
+            var words = sentence.Trim().Split(' ').Count(word => word.Any(char.IsLetter));
 
-            if (words.Length > highestNumber)
+            if (words > highestNumber)
             {
-                highestNumber = words.Length;
+                highestNumber = words;
             }
         }
         
         return highestNumber;
-        
-        
     }
 }
