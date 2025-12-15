@@ -25,6 +25,13 @@ public class DeepestPitAnswer
                     // Becomes invalid when there's no movement or has reached an end
                     if (i >= n)
                         break;
+                    
+                    
+                    // Go find right peak 
+                    while (i < n && points[i] > points[i - 1])
+                    {
+                        i++;
+                    }
                    
                 }
 
