@@ -4,7 +4,7 @@ public class DeepestPitAnswer
 {
     public static int Solution(int[] points)
     {
-            int n = points.Length;
+            var n = points.Length;
             int maxDepth = -1;
 
             int i = 1;
@@ -26,13 +26,25 @@ public class DeepestPitAnswer
                     if (i >= n)
                         break;
                     
+                    var bottom = points[i - 1];
                     
                     // Go find right peak 
                     while (i < n && points[i] > points[i - 1])
                     {
                         i++;
                     }
+                    
+   
+                    var rightPeak = points[i - 1];
+                    
+                    // calculate depth
+                    var depth = Math.Min(leftPeak - bottom, rightPeak - bottom);
+                    maxDepth = Math.Max(maxDepth, depth);
                    
+                }
+                else
+                {
+                    i++;
                 }
 
             }
